@@ -12,13 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
       "required": true
-    },
-    "subtitle": {
-      "type": "string",
-      "required": false
     },
     "price": {
       "type": "decimal",
@@ -27,36 +23,51 @@
     "description": {
       "type": "richtext"
     },
-    "size": {
-      "type": "json"
-    },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "thumbnail": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "orginal_price": {
+    "original_price": {
       "type": "decimal"
     },
     "slug": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "title"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "mappedBy": "products"
+      "inversedBy": "products"
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "products"
+    },
+    "short_description": {
+      "type": "richtext"
+    },
+    "bestdeal": {
+      "type": "boolean",
+      "default": false
+    },
+    "discountedsale": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

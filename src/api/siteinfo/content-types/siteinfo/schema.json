@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "siteinfos",
+  "info": {
+    "singularName": "siteinfo",
+    "pluralName": "siteinfos",
+    "displayName": "siteinfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}
