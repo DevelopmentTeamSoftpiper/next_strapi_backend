@@ -66,6 +66,12 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "user"
+    },
     "orders": {
       "type": "relation",
       "relation": "oneToMany",
