@@ -38,6 +38,48 @@
     },
     "post_code": {
       "type": "string"
+    },
+    "shipping_cost": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "phone_no": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "total": {
+      "type": "float"
+    },
+    "sale_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "canceled"
+      ]
+    },
+    "payment_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "delivery_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "on the way",
+        "arrived"
+      ]
+    },
+    "subtotal": {
+      "type": "float"
     }
   }
 }
