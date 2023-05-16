@@ -13,25 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "products": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "phone": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
       "type": "string"
     },
     "address": {
-      "type": "string"
-    },
-    "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "orders"
+      "type": "string",
+      "required": true
     },
     "city": {
       "type": "string"
@@ -40,13 +38,12 @@
       "type": "string"
     },
     "shipping_cost": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "payment_method": {
-      "type": "string"
-    },
-    "phone_no": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "transaction_id": {
       "type": "string"
@@ -80,6 +77,21 @@
     },
     "subtotal": {
       "type": "float"
+    },
+    "order_notes": {
+      "type": "text"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile",
+      "inversedBy": "orders"
+    },
+    "user_id_no": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
     }
   }
 }

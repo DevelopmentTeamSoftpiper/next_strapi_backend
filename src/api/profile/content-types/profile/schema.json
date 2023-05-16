@@ -15,7 +15,7 @@
     "address": {
       "type": "text",
       "unique": false,
-      "required": true
+      "required": false
     },
     "city": {
       "type": "string"
@@ -28,13 +28,28 @@
     },
     "phone": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "profile"
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "user_id_no": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "profile"
     }
   }
 }
